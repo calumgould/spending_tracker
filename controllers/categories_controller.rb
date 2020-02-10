@@ -8,7 +8,15 @@ get '/categories' do
   erb(:"categories/index")
 end
 
+#EDIT
+post '/categories/:id' do
+  @category = Category.new(params)
+  @category.update()
+  redirect '/categories'
+end
+
+#EDIT
 get '/categories/:id' do
   @category = Category.find(params['id'].to_i())
-  erb(:"categories/show")
+  erb(:"categories/edit")
 end

@@ -2,5 +2,6 @@
 
 <% @categories.each do |category| %>
   <p><%= category.name() %></p>
+  <p><a href="categories/<%= category.id %>">Edit</a></p>
   <hr />
 <% end %>
