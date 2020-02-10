@@ -55,7 +55,7 @@ class Track
     sql = "SELECT categories.name FROM categories WHERE id = $1"
     values = [@category_id]
     category_name = SqlRunner.run(sql, values)[0]
-    return category_name["name"]
+    return category_name['name']
   end
 
   def merchant()
@@ -78,7 +78,7 @@ class Track
     WHERE id = $1"
     values = [id]
     track = SqlRunner.run(sql, values)
-    result = Track.new(track[0])
+    result = Track.new(track.first())
     return result
   end
 

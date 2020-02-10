@@ -1,0 +1,22 @@
+<h1>Edit Track</h1>
+<br>
+<form class="edit_form" action="/tracks/<%= @track.id %>" method="post">
+  <label for="cat_name">Categories:</label>
+  <select name="category_id">
+    <% for category in @categories %>
+    <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
+  <br><br>
+  <label for="merch_name">Merchant:</label>
+  <select name="merchant_id">
+    <% for merchant in @merchants %>
+    <option value="<%= merchant.id %>"><%= merchant.name %></option>
+    <% end %>
+  </select>
+  <br><br>
+  <label for="amount">Amount: £</label>
+  <input id ="amount" type="text" name="amount" value="<%= @track.amount %>">
+  <br><br>
+  <input type="submit" value="Update">
+</form>

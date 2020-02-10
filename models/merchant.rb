@@ -46,7 +46,7 @@ class Merchant
     WHERE id = $1"
     values = [id]
     merchant = SqlRunner.run(sql, values)
-    result = Merchant.new(merchant[0])
+    result = Merchant.new(merchant.first())
     return result
   end
 
