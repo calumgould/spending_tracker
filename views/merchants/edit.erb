@@ -1,0 +1,8 @@
+<h1>What do you want to change this merchant to?</h1>
+<br>
+<form class="edit_form" action="/merchants/<%= @merchant.id %>" method="post">
+  <label for="name">Merchant:</label>
+  <input id ="name" type="text" name="name">
+  <br><br>
+  <input type="submit" value="Update">
+</form>

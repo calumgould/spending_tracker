@@ -2,5 +2,6 @@
 
 <% @merchants.each do |merchant| %>
   <p><%= merchant.name() %></p>
+  <p><a href="merchants/<%= merchant.id %>">Edit</a></p>
   <hr />
 <% end %>
