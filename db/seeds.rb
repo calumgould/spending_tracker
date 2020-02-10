@@ -1,11 +1,22 @@
 require_relative('../models/category')
 require_relative('../models/merchant')
 require_relative('../models/track')
+require_relative('../models/budget')
 require('pry')
 
 Track.delete_all()
 Category.delete_all()
 Merchant.delete_all()
+Budget.delete_all()
+
+############# BUDGETS #############
+
+budget1 = Budget.new({
+  "amount" => "500"
+})
+budget1.save()
+
+#####################################
 
 ############# CATEGORIES #############
 

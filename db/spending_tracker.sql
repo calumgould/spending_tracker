@@ -1,6 +1,13 @@
 DROP TABLE IF EXISTS tracks;
 DROP TABLE IF EXISTS merchants;
 DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS budget;
+
+CREATE TABLE budgets; (
+  id SERIAL PRIMARY KEY,
+  amount INT
+);
+
 
 CREATE TABLE categories (
   id SERIAL PRIMARY KEY,

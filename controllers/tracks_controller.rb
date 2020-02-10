@@ -4,6 +4,7 @@ require('pry')
 require_relative('../models/track')
 require_relative('../models/category')
 require_relative('../models/merchant')
+require_relative('../models/budget')
 also_reload('../models/*')
 
 get '/tracks' do
