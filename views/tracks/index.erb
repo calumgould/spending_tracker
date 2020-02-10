@@ -1,6 +1,7 @@
 <h1>Your Tracks</h1>
-
-<h2><a href="/budget">View Budget</a></h2>
+<h2>Your Budget</h2>
+<h2>£ <%= @budget.amount %></h2>
+<p><a href="/budget/<%= @budget.id %>/edit">Edit Budget</a></p>
 
 <h2><a href="tracks/new">Create New</a></h2>
 

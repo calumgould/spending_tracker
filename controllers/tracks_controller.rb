@@ -9,6 +9,7 @@ also_reload('../models/*')
 
 get '/tracks' do
   @tracks = Track.all()
+  @budget = Budget.all()
   erb(:"tracks/index")
 end
 

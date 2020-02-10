@@ -12,7 +12,7 @@ end
 post '/budget/:id' do
   @budget = Budget.new(params)
   @budget.update()
-  redirect '/budget'
+  redirect '/tracks'
 end
 
 #EDIT
