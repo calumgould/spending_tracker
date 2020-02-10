@@ -23,6 +23,7 @@
   <p>Amount: <%= track.amount %></p>
   <p>Categories: <%= track.category_name() %></p>
   <p>Merchant: <%= track.merchant_name() %></p>
+  <p>Time: <%= track.time_stamp %></p>
   <p><a href="tracks/<%= track.id %>">Edit</a></p>
   <form action="/tracks/<%= track.id %>/delete" method="post">
     <input type="submit" name="Delete" value="Delete">

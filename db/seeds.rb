@@ -162,35 +162,40 @@ merchant12.save()
 track1 = Track.new({
   "amount" => "20",
   "category_id" => category1.id,
-  "merchant_id" => merchant12.id
+  "merchant_id" => merchant12.id,
+  "timestamp" => "2020-02-10 15:43:20"
   })
 track1.save()
 
 track2 = Track.new({
   "amount" => "30",
   "category_id" => category13.id,
-  "merchant_id" => merchant1.id
+  "merchant_id" => merchant1.id,
+  "timestamp" => "2020-02-06 12:36:10"
   })
 track2.save()
 
 track3 = Track.new({
   "amount" => "100",
   "category_id" => category1.id,
-  "merchant_id" => merchant10.id
+  "merchant_id" => merchant10.id,
+  "timestamp" => "2020-02-02 10:16:52"
   })
 track3.save()
 
 track4 = Track.new({
   "amount" => "5",
   "category_id" => category11.id,
-  "merchant_id" => merchant9.id
+  "merchant_id" => merchant9.id,
+  "timestamp" => "2020-01-04 16:34:40"
   })
 track4.save()
 
 track5 = Track.new({
   "amount" => "30",
   "category_id" => category3.id,
-  "merchant_id" => merchant3.id
+  "merchant_id" => merchant3.id,
+  "timestamp" => "2020-01-13 20:26:14"
   })
 track5.save()
 

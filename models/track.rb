@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Track
 
-  attr_reader :id, :category_id, :merchant_id
+  attr_reader :id, :category_id, :merchant_id, :time_stamp
   attr_accessor :amount
 
   def initialize(options)
@@ -10,20 +10,24 @@ class Track
     @amount = options['amount'].to_i()
     @category_id = options['category_id'].to_i
     @merchant_id = options['merchant_id'].to_i
+    @time_stamp = Time.now
   end
+
+# .strftime("%k:%M - %d/%m/%Y")
 
   def save()
     sql = "INSERT INTO tracks (
     amount,
     category_id,
-    merchant_id
+    merchant_id,
+    time_stamp
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
     RETURNING id"
-    values = [@amount, @category_id, @merchant_id]
+    values = [@amount, @category_id, @merchant_id, @time_stamp]
     track = SqlRunner.run(sql, values)[0]
     @id = track['id']
   end
@@ -33,13 +37,14 @@ class Track
     UPDATE tracks SET (
       amount,
       category_id,
-      merchant_id
+      merchant_id,
+      time_stamp
     ) =
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
-    WHERE id = $4"
-    values = [@amount, @category_id, @merchant_id, @id]
+    WHERE id = $5"
+    values = [@amount, @category_id, @merchant_id, @time_stamp, @id]
     SqlRunner.run(sql, values)
   end
 
