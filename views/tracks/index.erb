@@ -3,7 +3,7 @@
 <h2>£ <%= @budget.amount %></h2>
 <p><a href="/budget/<%= @budget.id %>/edit">Edit Budget</a></p>
 
-<h3>Total Spend: £ <%= Track.total_spent %></h3>
+<h2>Total Spend: £ <%= Track.total_spent %></h2>
 
 <% remaining_budget = @budget.amount - Track.total_spent %>
 
@@ -16,14 +16,14 @@
 <% end %>
 
 
-<h2><a href="tracks/new">Create New</a></h2>
+<h2><a href="tracks/new">Track a Purchase</a></h2>
 <hr />
 
 <% @tracks.each do |track| %>
   <p>Amount: <%= track.amount %></p>
   <p>Categories: <%= track.category_name() %></p>
   <p>Merchant: <%= track.merchant_name() %></p>
-  <p>Time: <%= track.time_stamp %></p>
+  <p>Time: <%= track.time_stamp.strftime("%k:%M - %d/%m/%Y") %></p>
   <p><a href="tracks/<%= track.id %>">Edit</a></p>
   <form action="/tracks/<%= track.id %>/delete" method="post">
     <input type="submit" name="Delete" value="Delete">
