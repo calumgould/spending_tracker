@@ -3,5 +3,8 @@
 <% @merchants.each do |merchant| %>
   <p><%= merchant.name() %></p>
   <p><a href="merchants/<%= merchant.id %>">Edit</a></p>
+  <form action="/merchants/<%= merchant.id %>/delete" method="post">
+    <input type="submit" name="Delete" value="Delete">
+  </form>
   <hr />
 <% end %>

@@ -41,3 +41,10 @@ get '/tracks/:id' do
   @track = Track.find(params[:id].to_i())
   erb(:"tracks/edit")
 end
+
+#DELETE
+post '/tracks/:id/delete' do
+  track = Track.find(params[:id].to_i())
+  track.delete()
+  redirect '/tracks'
+end

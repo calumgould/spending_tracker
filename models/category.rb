@@ -33,6 +33,13 @@ class Category
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "DELETE FROM categories
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def tracks_by_category()
     sql = "SELECT * FROM tracks
     WHERE category_id = $1"

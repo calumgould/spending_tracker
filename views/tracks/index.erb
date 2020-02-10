@@ -5,5 +5,8 @@
   <p>Categories: <%= track.category_name() %></p>
   <p>Merchant: <%= track.merchant_name() %></p>
   <p><a href="tracks/<%= track.id %>">Edit</a></p>
+  <form action="/tracks/<%= track.id %>/delete" method="post">
+    <input type="submit" name="Delete" value="Delete">
+  </form>
   <hr />
 <% end %>
