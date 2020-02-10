@@ -8,8 +8,8 @@ class Track
   def initialize(options)
     @id = options['id'].to_i() if options['id']
     @amount = options['amount'].to_i()
-    @category_id = options['category_id']
-    @merchant_id = options['merchant_id']
+    @category_id = options['category_id'].to_i
+    @merchant_id = options['merchant_id'].to_i
   end
 
   def save()

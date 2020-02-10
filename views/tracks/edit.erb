@@ -4,14 +4,14 @@
   <label for="cat_name">Categories:</label>
   <select name="category_id" value="<%= @track.category_id %>">
     <% for category in @categories %>
-    <option value="<%= category.id %>"><%= category.name %></option>
+    <option value="<%= category.id %>" <%= "selected" if category.id == @track.category_id %>><%= category.name %></option>
     <% end %>
   </select>
   <br><br>
   <label for="merch_name">Merchant:</label>
-  <select name="merchant_id" value="<%= @track.merchant_id %>">
+  <select name="merchant_id">
     <% for merchant in @merchants %>
-    <option value="<%= merchant.id %>"><%= merchant.name %></option>
+    <option value="<%= merchant.id %>" <%= "selected" if merchant.id == @track.merchant_id %>><%= merchant.name %></option>
     <% end %>
   </select>
   <br><br>
