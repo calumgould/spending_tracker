@@ -84,7 +84,6 @@ class Track
     sql = "SELECT amount FROM tracks"
     spends_hashes = SqlRunner.run(sql)
     spends = spends_hashes.reduce(0){|sum, spend| sum + spend['amount'].to_i()}
-    p spends
   end
 
   def self.find(id)
