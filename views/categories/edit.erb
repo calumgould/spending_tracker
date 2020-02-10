@@ -1,8 +1,8 @@
-<h1>What do you want to change this category to?</h1>
+<h1>Rename Category</h1>
 <br>
 <form class="edit_form" action="/categories/<%= @category.id %>" method="post">
   <label for="name">Category:</label>
-  <input id ="name" type="text" name="name">
+  <input id ="name" type="text" name="name" value="<%= @category.name %>">
   <br><br>
   <input type="submit" value="Update">
 </form>
