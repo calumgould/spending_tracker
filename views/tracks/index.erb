@@ -1,0 +1,8 @@
+<h1>Your Tracks</h1>
+
+<% @tracks.each do |track| %>
+  <p>Amount: <%= track.amount %></p>
+  <p>Categories: <%= track.category_name() %></p>
+  <p>Merchant: <%= track.merchant_name() %></p>
+  <hr />
+<% end %>

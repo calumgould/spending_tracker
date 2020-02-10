@@ -24,6 +24,19 @@ class Category
     @id = category['id']
   end
 
+  def update()
+    sql = "
+    UPDATE categories SET (
+      name
+    ) =
+    (
+      $1
+    )
+    WHERE id = $2"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def tracks_by_category()
     sql = "SELECT * FROM tracks
     WHERE category_id = $1"
@@ -37,7 +50,7 @@ class Category
     WHERE id = $1"
     values = [id]
     category = SqlRunner.run(sql, values)
-    result = Category.new(category)[0]
+    result = Category.new(category[0])
     return result
   end
 

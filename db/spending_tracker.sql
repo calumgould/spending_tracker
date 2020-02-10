@@ -15,6 +15,6 @@ CREATE TABLE merchants (
 CREATE TABLE tracks (
   id SERIAL PRIMARY KEY,
   amount INT,
-  category_id INT REFERENCES categories(id),
-  merchant_id INT REFERENCES merchants(id)
+  category_id INT REFERENCES categories(id) ON DELETE CASCADE,
+  merchant_id INT REFERENCES merchants(id) ON DELETE CASCADE
 );
