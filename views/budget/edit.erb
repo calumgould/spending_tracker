@@ -1,8 +1,8 @@
 <h1>Enter Amount</h1>
 <br>
 <form class="edit_form" action="/budget/<%= @budget.id %>" method="post">
-  <label for="name">Budget: £</label>
-  <input id ="name" type="text" name="name" value="<%= @budget.amount %>">
+  <label for="amount">Budget: £</label>
+  <input id ="amount" type="number" name="amount" value="<%= @budget.amount %>">
   <br><br>
   <input type="submit" value="Update">
 </form>
