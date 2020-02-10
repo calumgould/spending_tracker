@@ -1,5 +1,7 @@
 <h1>Your Categories</h1>
 
+<h2><a href="categories/new">Create New</a></h2>
+
 <% @categories.each do |category| %>
   <p><%= category.name() %></p>
   <p><a href="categories/<%= category.id %>">Edit</a></p>
