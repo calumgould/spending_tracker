@@ -52,8 +52,10 @@ class Category
 
   def self.all()
     sql = "SELECT * FROM categories"
-    categories = SqlRunner.run(sql)
-    return categories.map { |category| Category.new(category) }
+    category_hashes = SqlRunner.run(sql)
+    categories = category_hashes.map { |category| Category.new(category) }
+    return categories.sort_by {|category| category.name }
+    # return array.sort { |a, b| a.name <=> b.name }
   end
 
   def self.delete_all()

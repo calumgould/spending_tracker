@@ -52,8 +52,9 @@ class Merchant
 
   def self.all()
     sql = "SELECT * FROM merchants"
-    merchants = SqlRunner.run(sql)
-    return merchants.map { |merchant| Merchant.new(merchant) }
+    merchant_hashes = SqlRunner.run(sql)
+    merchants = merchant_hashes.map { |merchant| Merchant.new(merchant) }
+    return merchants.sort_by {|merchant| merchant.name }
   end
 
   def self.delete_all()

@@ -104,7 +104,7 @@ merchant4 = Merchant.new({
 merchant4.save()
 
 merchant5 = Merchant.new({
-  "name" => "Scotmid"
+  "name" => "My Protein"
 })
 merchant5.save()
 
