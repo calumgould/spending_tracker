@@ -8,6 +8,17 @@ get '/categories' do
   erb(:"categories/index")
 end
 
+get '/categories/new' do
+  @categories = Category.all()
+  erb(:"categories/new")
+end
+
+post '/categories' do
+  @category = Category.new(params)
+  @category.save()
+  redirect '/categories'
+end
+
 #EDIT
 post '/categories/:id' do
   @category = Category.new(params)
@@ -17,6 +28,6 @@ end
 
 #EDIT
 get '/categories/:id' do
-  @category = Category.find(params['id'].to_i())
+  @category = Category.find(params[:id].to_i())
   erb(:"categories/edit")
 end

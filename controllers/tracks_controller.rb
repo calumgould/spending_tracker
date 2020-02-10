@@ -11,6 +11,21 @@ get '/tracks' do
   erb(:"tracks/index")
 end
 
+#NEW
+get '/tracks/new' do
+  @tracks = Track.all()
+  @merchants = Merchant.all()
+  @categories = Category.all()
+  erb(:"tracks/new")
+end
+
+#NEW
+post '/tracks' do
+  @track = Track.new(params)
+  @track.save()
+  redirect '/tracks'
+end
+
 #EDIT
 post '/tracks/:id' do
   @track = Track.new(params)
@@ -23,6 +38,6 @@ get '/tracks/:id' do
   @tracks = Track.all()
   @merchants = Merchant.all()
   @categories = Category.all()
-  @track = Track.find(params['id'].to_i())
+  @track = Track.find(params[:id].to_i())
   erb(:"tracks/edit")
 end
