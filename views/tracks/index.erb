@@ -3,10 +3,12 @@
 <h2>£ <%= @budget.amount %></h2>
 <p><a href="/budget/<%= @budget.id %>/edit">Edit Budget</a></p>
 
+<h3>Total Spend: £ <%= Track.total_spent %></h3>
+
 <% remaining_budget = @budget.amount - Track.total_spent %>
 
 <% if remaining_budget < 0 %>
-  <p>You are £<%= remaining_budget %> over budget!</p>
+  <p>You are £<%= remaining_budget.abs %> over budget!</p>
   <% elsif remaining_budget.between?(1, 50) %>
   <p>You only have £<%= remaining_budget %> of your budget left!</p>
   <% elsif remaining_budget > 0 %>
@@ -14,9 +16,8 @@
 <% end %>
 
 
-
-<h3>Total Spend: £ <%= Track.total_spent %></h3>
 <h2><a href="tracks/new">Create New</a></h2>
+<hr />
 
 <% @tracks.each do |track| %>
   <p>Amount: <%= track.amount %></p>
