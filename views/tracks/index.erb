@@ -1,32 +1,54 @@
-<h1>Your Tracks</h1>
-<h2>Your Budget</h2>
-<h2>£ <%= @budget.amount %></h2>
-<p><a href="/budget/<%= @budget.id %>/edit">Edit Budget</a></p>
+<div class="summary">
 
-<h2>Total Spend: £ <%= Track.total_spent %></h2>
+  <div class="warning">
+      <% remaining_budget = @budget.amount - Track.total_spent %>
+      <% if remaining_budget < 0 %>
+        <h3 class="over_budget">You are £<%= remaining_budget.abs %> over budget!</h3>
+        <% elsif remaining_budget.between?(1, 50) %>
+        <h3 class="near_budget">You only have £<%= remaining_budget %> of your budget left!</h3>
+        <% elsif remaining_budget > 0 %>
+        <h3 class="under_budget">You have £<%= remaining_budget %> of your budget left</h3>
+      <% end %>
+  </div>
 
-<% remaining_budget = @budget.amount - Track.total_spent %>
+  <div class="container">
 
-<% if remaining_budget < 0 %>
-  <h3>You are £<%= remaining_budget.abs %> over budget!</h3>
-  <% elsif remaining_budget.between?(1, 50) %>
-  <h3>You only have £<%= remaining_budget %> of your budget left!</h3>
-  <% elsif remaining_budget > 0 %>
-  <h3>You have £<%= remaining_budget %> of your budget left</h3>
-<% end %>
+    <div class="budget">
+      <div class="budget_top">
+        <h2 class="nunito">Your Budget</h2>
+        <h1 class = "nunito">£ <%= @budget.amount %></h1>
+      </div>
+      <div class="budget_bottom">
+        <button type="button" class="button" onclick="location.href='/budget/<%=@budget.id %>/edit'">Edit Budget</button>
+      </div>
+    </div>
+
+    <div class="tracks">
+      <div class="tracks_top">
+        <h2 class="nunito">Total Spend</h2>
+        <h1 class="nunito">£ <%= Track.total_spent %></h1>
+      </div>
+      <div class="tracks_bottom">
+        <button type="button" class="button" onclick="location.href='/tracks/new'">Track a Purchase</button>
+      </div>
+    </div>
+  </div>
 
 
-<h2><a href="tracks/new">Track a Purchase</a></h2>
-<hr />
+    <div class="track_container">
+      <div class="track_log">
+        <% @tracks.each do |track| %>
+          <p>Amount: £<%= track.amount %></p>
+          <p>Categories: <%= track.category_name() %></p>
+          <p>Merchant: <%= track.merchant_name() %></p>
+          <p>Time: <%= track.time_stamp.strftime("%k:%M - %d/%m/%Y") %></p>
+          <button type="button" class="button_small" onclick="location.href='/tracks/<%= track.id %>'">Edit</button>
+          <form action="/tracks/<%= track.id %>/delete" method="post">
+            <input type="submit" name="Delete" value="Delete" class="delete">
+          </form>
+          <hr />
+        <% end %>
+      </div>
+    </div>
 
-<% @tracks.each do |track| %>
-  <p>Amount: £<%= track.amount %></p>
-  <p>Categories: <%= track.category_name() %></p>
-  <p>Merchant: <%= track.merchant_name() %></p>
-  <p>Time: <%= track.time_stamp.strftime("%k:%M - %d/%m/%Y") %></p>
-  <p><a href="tracks/<%= track.id %>">Edit</a></p>
-  <form action="/tracks/<%= track.id %>/delete" method="post">
-    <input type="submit" name="Delete" value="Delete">
-  </form>
-  <hr />
-<% end %>
+</div>

@@ -4,8 +4,10 @@ html {
 }
 
 body {
-  padding-top: 6em;
+  padding-top: 0.8em;
 }
+
+/* NAV */
 
 nav.nunito {
   text-align: center;
@@ -39,6 +41,10 @@ nav li:hover {
   background-color: #89B802;
 }
 
+/* ********* */
+
+
+
 .nunito {
   font-family: 'Nunito', sans-serif;
 }
@@ -54,6 +60,7 @@ nav li:hover {
   color: #89B802
 }
 
+
 div.homepage img {
   min-height: 100%;
   width: 100%;
@@ -64,6 +71,7 @@ div.homepage img {
   z-index: -1;
 }
 
+/* BUTTONS */
 
 .button {
   background-color: #89B802;
@@ -85,3 +93,160 @@ div.homepage img {
 .button:focus {
   outline: none;
 }
+
+.button_small {
+  background-color: #89B802;
+  border: none;
+  color: white;
+  padding: 0.25em 1em;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4em;
+  display: block;
+  margin: auto;
+}
+
+.button_small:hover {
+  opacity: 95%;
+}
+
+.button_small:focus {
+  outline: none;
+}
+
+.delete {
+  background-color: #E9190F;
+  border: none;
+  color: white;
+  padding: 0.25em 1em;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4em;
+  display: block;
+  margin: auto;
+}
+/* ******* */
+
+/* TRACKS */
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+div.summary {
+  text-align: center;
+  line-height: normal;
+}
+
+h2.nunito {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+}
+
+h1.nunito {
+  font-size: 4.5em;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.budget {
+  flex-grow: 1;
+  width: 50%;
+  text-align: center;
+  padding: 2em;
+  padding-left: 8em;
+}
+
+.budget_top {
+  height: 75%;
+}
+
+.budget_bottom {
+  height: 25%;
+}
+
+.tracks {
+  flex-grow: 1;
+  width: 50%;
+  text-align: center;
+  padding: 2em;
+  padding-right: 8em;
+}
+
+.tracks_top {
+  height: 75%;
+}
+
+.tracks_bottom {
+  height: 25%;
+}
+
+/* ******* */
+
+/* RESPONSIVE BUDGET BANNER */
+
+.summary {
+  width: 100%;
+}
+
+.warning {
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  font-size: 2.5em;
+  margin: 0 auto;
+  height: auto;
+}
+
+h3.over_budget {
+  background-color: #E9190F;
+}
+
+h3.near_budget {
+  background-color: #FDBA00;
+}
+
+h3.under_budget {
+  background-color: #89B802
+}
+
+/* ************ */
+
+/* TRACK LOG */
+
+.track_container {
+  display: flex;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  max-width: 100%
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+  /* border-bottom: 2px solid black; */
+}
+
+.track_log {
+  display: inline-flex;
+  flex-grow: 1;
+  width: 33%;
+  text-align: center;
+  padding: 2em;
+}
+
+/* *********** */
