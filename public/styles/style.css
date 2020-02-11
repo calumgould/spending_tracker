@@ -377,4 +377,13 @@ h3.under_budget {
   padding-bottom: 2em;
 }
 
+.input_box label {
+  font-size: 2em;
+  font-family: 'Nunito', sans-serif;
+}
+
+.input_box select {
+  font-size: 1.5em;
+}
+
 /*  */
