@@ -22,7 +22,7 @@ post '/merchants' do
 end
 
 #EDIT
-post '/merchants/:id/' do
+post '/merchants/:id' do
   @merchant = Merchant.new(params)
   @merchant.update()
   redirect '/merchants'

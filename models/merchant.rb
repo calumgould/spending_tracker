@@ -52,8 +52,8 @@ class Merchant
     sql = "SELECT * FROM merchants
     WHERE id = $1"
     values = [id]
-    merchant = SqlRunner.run(sql, values)
-    result = Merchant.new(merchant.first())
+    merchant = SqlRunner.run(sql, values)[0]
+    result = Merchant.new(merchant)
     return result
   end
 

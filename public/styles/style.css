@@ -5,6 +5,7 @@ html {
 
 body {
   padding-top: 0.8em;
+  margin: 0;
 }
 
 /* NAV */
@@ -61,8 +62,16 @@ nav li:hover {
   color: white;
 }
 
+h1.logo {
+  margin-bottom: 0;
+}
+
 .dot {
   color: #89B802
+}
+
+.enter {
+  padding-bottom: 20em;
 }
 
 
@@ -164,7 +173,7 @@ div.homepage img {
 }
 
 .new_button {
-  padding-top: 4.5em;
+  padding-top: 6em;
 }
 
 .cat_buttons, .merch_buttons {
@@ -271,6 +280,7 @@ a {
   font-size: 2.5em;
   margin: 0 auto;
   height: auto;
+  padding-top: 0.2em;
 }
 
 h3.over_budget {
@@ -300,7 +310,7 @@ h3.under_budget {
 
 .track_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   flex-wrap: wrap;
@@ -335,7 +345,7 @@ h3.under_budget {
 
 .cat_container, .merch_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-family: 'Montserrat', sans-serif;
   flex-wrap: wrap;
   margin-left: 6em;
@@ -360,12 +370,12 @@ h3.under_budget {
 
 /* EDIT/NEW PAGES */
 
-.edit_page h1 {
+.edit_page h1, .new_page h1 {
   text-align: center;
   padding-top: 1.5em;
 }
 
-.edit_page input {
+.edit_page input, .new_page input {
   font-size: 3em;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -385,5 +395,6 @@ h3.under_budget {
 .input_box select {
   font-size: 1.5em;
 }
+
 
 /*  */

@@ -1,9 +1,9 @@
 <div class="edit_page">
   <h1 class="nunito">Rename Category:</h1>
-  <form class="edit_form" action="/categories/<%=@category.id %>" method="post">
+  <form class="edit_form" action="/categories/<%= @category.id %>" method="post">
     <label for="name"></label>
     <div class="input_box">
-      <input id ="name" type="text" name="name"value="<%= @category.name %>">
+      <input id ="name" type="text" name="name" value="<%= @category.name %>">
     </div>
     <br><br>
     <input type="submit" value="Update"class="button">
