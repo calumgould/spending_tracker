@@ -321,7 +321,7 @@ h3.under_budget {
 
 /* *********** */
 
-/* CATEGORY PAGE */
+/* CATEGORY PAGE & MERCH PAGE */
 
 .cat_head, .merch_head {
   font-family: 'Nunito', sans-serif;
@@ -358,9 +358,23 @@ h3.under_budget {
 
 /* ********* */
 
-/* MERCHANT PAGE */
+/* EDIT/NEW PAGES */
 
+.edit_page h1 {
+  text-align: center;
+  padding-top: 1.5em;
+}
 
+.edit_page input {
+  font-size: 3em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
 
+.input_box {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
 
-/* *********** */
+/*  */

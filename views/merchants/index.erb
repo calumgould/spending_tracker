@@ -12,7 +12,7 @@
       <p><%= merchant.name() %></p>
       <div class="merch_buttons">
         <div class="edit_button">
-          <button type="button" class="button_small" onclick="location.href='/merchants/<%= merchant.id %> %>'">Edit</button>
+          <button type="button" class="button_small" onclick="location.href='/merchants/<%= merchant.id %>'">Edit</button>
         </div>
         <div class="merch_delete_button">
           <form action="/merchants/<%= merchant.id %>/delete" method="post">

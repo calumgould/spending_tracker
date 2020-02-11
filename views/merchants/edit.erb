@@ -1,8 +1,11 @@
-<h1>Rename Merchant</h1>
-<br>
-<form class="edit_form" action="/merchants/<%= @merchant.id %>" method="post">
-  <label for="name">Merchant:</label>
-  <input id ="name" type="text" name="name" value="<%= @merchant.name %>">
-  <br><br>
-  <input type="submit" value="Update">
-</form>
+<div class="edit_page">
+  <h1 class="nunito">Rename Merchant</h1>
+  <form class="edit_form" action="/merchants/<%= @merchant.id %>" method="post">
+    <label for="name"></label>
+    <div class="input_box">
+      <input id ="name" type="text" name="name" value="<%= @merchant.name %>">
+    </div>
+    <br><br>
+    <input type="submit" value="Update" class="button">
+  </form>
+</div>
