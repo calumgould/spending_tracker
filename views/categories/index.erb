@@ -1,12 +1,27 @@
-<h1>Your Categories</h1>
+<div class="cat_page">
+  <div class="new_button">
+    <button type="button" class="button" onclick="location.href='/categories/new'">Create New</button>
+  </div>
 
-<h2><a href="categories/new">Create New</a></h2>
 
-<% @categories.each do |category| %>
-  <p><%= category.name() %></p>
-  <p><a href="categories/<%= category.id %>">Edit</a></p>
-  <form action="/categories/<%= category.id %>/delete" method="post">
-    <input type="submit" name="Delete" value="Delete">
-  </form>
-  <hr />
-<% end %>
+  <h1 class="cat_head">Your Categories</h1>
+
+  <div class="cat_container">
+    <% @categories.each do |category| %>
+      <div class="cat_list">
+        <p><%= category.name() %></p>
+        <div class="cat_buttons">
+          <div class="edit_button">
+            <button type="button" class="button_small" onclick="location.href='/categories/<%= category.id %>'">Edit</button>
+          </div>
+          <div class="cat_delete_button">
+            <form action="/categories/<%= category.id %>/delete" method="post">
+              <input type="submit" name="Delete" value="Delete" class="delete">
+            </form>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
