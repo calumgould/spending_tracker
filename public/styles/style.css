@@ -37,6 +37,11 @@ nav li a {
   padding: 0.75em;
 }
 
+nav li a.active {
+  text-decoration: underline;
+  color: inherit;
+}
+
 nav li:hover {
   background-color: #89B802;
 }
@@ -75,6 +80,7 @@ div.homepage img {
 
 .button {
   background-color: #89B802;
+  font-family: 'Nunito', sans-serif;
   border: none;
   color: white;
   padding: 0.5em 2em;
@@ -96,6 +102,7 @@ div.homepage img {
 
 .button_small {
   background-color: #89B802;
+  font-family: 'Nunito', sans-serif;
   border: none;
   color: white;
   padding: 0.25em 1em;
@@ -105,6 +112,7 @@ div.homepage img {
   border-radius: 4em;
   display: block;
   margin: auto;
+
 }
 
 .button_small:hover {
@@ -117,6 +125,7 @@ div.homepage img {
 
 .delete {
   background-color: #E9190F;
+  font-family: 'Nunito', sans-serif;
   border: none;
   color: white;
   padding: 0.25em 1em;
@@ -127,6 +136,33 @@ div.homepage img {
   display: block;
   margin: auto;
 }
+
+.track_buttons {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-top: 2em;;
+
+}
+
+.edit_button {
+  flex: 1;
+}
+
+.edit_button button {
+  padding: 0.25em 1em;
+  font-size: 1.5em;
+}
+
+.delete_button {
+  flex: 1;
+}
+
+.delete_button input {
+  padding: 0.25em 1em;
+  font-size: 1.5em;
+}
+
 /* ******* */
 
 /* TRACKS */
@@ -162,7 +198,7 @@ a {
   min-height: 100%;
   height: auto;
   width: 100%;
-  border-bottom: 2px solid black;
+  padding-bottom: 2.5em;
 }
 
 .budget {
@@ -229,24 +265,35 @@ h3.under_budget {
 
 /* TRACK LOG */
 
+.summary_head {
+  font-family: 'Nunito', sans-serif;
+  font-size: 4.5em;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.5em;
+}
+
 .track_container {
   display: flex;
-  min-height: 100%;
-  height: auto;
-  width: 100%;
-  max-width: 100%
-  justify-content: center;
-  align-items: center;
-  background: yellow;
-  /* border-bottom: 2px solid black; */
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-left: 6em;
+  margin-right: 6em;
 }
 
 .track_log {
-  display: inline-flex;
-  flex-grow: 1;
-  width: 33%;
-  text-align: center;
+  width: 26%;
+  background: #EFEFEF;
+  margin: 1em;
   padding: 2em;
 }
+
+.track_log p {
+  font-size: 1.5em;
+}
+
+
 
 /* *********** */
