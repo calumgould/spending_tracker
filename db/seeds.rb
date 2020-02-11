@@ -26,69 +26,44 @@ category1 = Category.new({
 category1.save()
 
 category2 = Category.new({
-  "name" => "Bills"
+  "name" => "Enjoyment"
 })
 category2.save()
 
 category3 = Category.new({
-  "name" => "Enjoyment"
+  "name" => "Home"
 })
 category3.save()
 
 category4 = Category.new({
-  "name" => "Family"
-})
-category4.save()
-
-category4 = Category.new({
-  "name" => "Home"
+  "name" => "One-off or Other"
 })
 category4.save()
 
 category5 = Category.new({
-  "name" => "Income"
+  "name" => "Transport"
 })
 category5.save()
 
 category6 = Category.new({
-  "name" => "Insurance"
+  "name" => "Untagged"
 })
 category6.save()
 
 category7 = Category.new({
-  "name" => "One-off or Other"
+  "name" => "Food"
 })
 category7.save()
 
 category8 = Category.new({
-  "name" => "Repayments"
+  "name" => "Business"
 })
 category8.save()
 
 category9 = Category.new({
-  "name" => "Savings"
+  "name" => "Personal"
 })
 category9.save()
-
-category10 = Category.new({
-  "name" => "Transfers"
-})
-category10.save()
-
-category11 = Category.new({
-  "name" => "Transport"
-})
-category11.save()
-
-category12 = Category.new({
-  "name" => "Untagged"
-})
-category12.save()
-
-category13 = Category.new({
-  "name" => "Food"
-})
-category13.save()
 
 #####################################
 
@@ -163,39 +138,39 @@ track1 = Track.new({
   "amount" => "20",
   "category_id" => category1.id,
   "merchant_id" => merchant12.id,
-  "timestamp" => "2020-02-10 15:43:20"
+  "time_stamp" => "2020-02-10 15:43:20"
   })
 track1.save()
 
 track2 = Track.new({
   "amount" => "30",
-  "category_id" => category13.id,
+  "category_id" => category7.id,
   "merchant_id" => merchant1.id,
-  "timestamp" => "2020-02-06 12:36:10"
+  "time_stamp" => "2020-02-06 12:36:10"
   })
 track2.save()
 
 track3 = Track.new({
   "amount" => "100",
-  "category_id" => category1.id,
+  "category_id" => category9.id,
   "merchant_id" => merchant10.id,
-  "timestamp" => "2020-02-02 10:16:52"
+  "time_stamp" => "2020-02-02 10:16:52"
   })
 track3.save()
 
 track4 = Track.new({
   "amount" => "5",
-  "category_id" => category11.id,
+  "category_id" => category5.id,
   "merchant_id" => merchant9.id,
-  "timestamp" => "2020-01-04 16:34:40"
+  "time_stamp" => "2020-01-04 16:34:40"
   })
 track4.save()
 
 track5 = Track.new({
   "amount" => "30",
-  "category_id" => category3.id,
+  "category_id" => category2.id,
   "merchant_id" => merchant3.id,
-  "timestamp" => "2020-01-13 20:26:14"
+  "time_stamp" => "2020-01-13 20:26:14"
   })
 track5.save()
 

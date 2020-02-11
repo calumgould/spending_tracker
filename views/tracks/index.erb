@@ -8,11 +8,11 @@
 <% remaining_budget = @budget.amount - Track.total_spent %>
 
 <% if remaining_budget < 0 %>
-  <p>You are £<%= remaining_budget.abs %> over budget!</p>
+  <h3>You are £<%= remaining_budget.abs %> over budget!</h3>
   <% elsif remaining_budget.between?(1, 50) %>
-  <p>You only have £<%= remaining_budget %> of your budget left!</p>
+  <h3>You only have £<%= remaining_budget %> of your budget left!</h3>
   <% elsif remaining_budget > 0 %>
-  <p>You have £<%= remaining_budget %> of your budget left</p>
+  <h3>You have £<%= remaining_budget %> of your budget left</h3>
 <% end %>
 
 
@@ -20,7 +20,7 @@
 <hr />
 
 <% @tracks.each do |track| %>
-  <p>Amount: <%= track.amount %></p>
+  <p>Amount: £<%= track.amount %></p>
   <p>Categories: <%= track.category_name() %></p>
   <p>Merchant: <%= track.merchant_name() %></p>
   <p>Time: <%= track.time_stamp.strftime("%k:%M - %d/%m/%Y") %></p>

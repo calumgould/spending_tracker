@@ -1,3 +1,87 @@
 html {
-  background-color: red;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 6em;
+}
+
+nav.nunito {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #272727;
+  overflow: hidden;
+  font-size: 1.5em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 0.75em;
+}
+
+nav li:hover {
+  background-color: #89B802;
+}
+
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+.nunito h1 {
+  font-size: 15em;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+.dot {
+  color: #89B802
+}
+
+div.homepage img {
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+.button {
+  background-color: #89B802;
+  border: none;
+  color: white;
+  padding: 0.5em 2em;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 4em;
+  display: block;
+  margin: auto;
+}
+
+.button:hover {
+  opacity: 95%;
+}
+
+.button:focus {
+  outline: none;
 }

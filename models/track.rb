@@ -10,7 +10,7 @@ class Track
     @amount = options['amount'].to_i()
     @category_id = options['category_id'].to_i
     @merchant_id = options['merchant_id'].to_i
-    @time_stamp = Time.now
+    @time_stamp = options['time_stamp'] ? DateTime.parse(options['time_stamp']) : Time.now
   end
 
 # .strftime("%k:%M - %d/%m/%Y")
