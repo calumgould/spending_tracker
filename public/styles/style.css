@@ -64,7 +64,7 @@ nav li:hover {
 
 /* ********* */
 
-
+/* HOMEPAGE */
 
 .nunito {
   font-family: 'Nunito', sans-serif;
@@ -99,6 +99,8 @@ div.homepage img {
   left: 0;
   z-index: -1;
 }
+
+/* *********** */
 
 /* BUTTONS */
 
@@ -412,4 +414,4 @@ h3.under_budget {
 }
 
 
-/*  */
+/* *********** */
