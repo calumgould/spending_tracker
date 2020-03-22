@@ -2,7 +2,6 @@ require_relative('../models/category')
 require_relative('../models/merchant')
 require_relative('../models/track')
 require_relative('../models/budget')
-require('pry')
 
 Track.delete_all()
 Category.delete_all()
@@ -175,6 +174,3 @@ track5 = Track.new({
 track5.save()
 
 #####################################
-
-binding.pry
-nil
