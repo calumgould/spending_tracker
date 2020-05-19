@@ -1,4 +1,4 @@
-# Spend - Spending Tracker
+# Spend
 
 Spend is a web-app, allowing users to track their spending to have better control over their finances.
 
