@@ -12,7 +12,7 @@ ruby app.rb
 
 ## Demo
 
-[App Demo](public/spend_demo.gif)
+![App Demo](public/spend_demo.gif)
 
 ### Technologies
 
