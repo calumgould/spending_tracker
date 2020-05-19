@@ -2,6 +2,10 @@
 
 Spend is a web-app, allowing users to track their spending to have better control over their finances.
 
+## App
+
+View at https://spend-dot.herokuapp.com/
+
 ## Setup
 
 ```
